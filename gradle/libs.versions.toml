@@ -1,0 +1,37 @@
+[versions]
+agp = "8.6.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+latestFastAdapterRelease = "5.7.0"
+material = "1.12.0"
+activity = "1.10.1"
+constraintlayout = "2.2.1"
+objectboxGradlePlugin = "4.2.0"
+
+[libraries]
+fastadapter = { module = "com.mikepenz:fastadapter", version.ref = "latestFastAdapterRelease" }
+fastadapter-extensions-binding = { module = "com.mikepenz:fastadapter-extensions-binding", version.ref = "latestFastAdapterRelease" }
+fastadapter-extensions-diff = { module = "com.mikepenz:fastadapter-extensions-diff", version.ref = "latestFastAdapterRelease" }
+fastadapter-extensions-drag = { module = "com.mikepenz:fastadapter-extensions-drag", version.ref = "latestFastAdapterRelease" }
+fastadapter-extensions-expandable = { module = "com.mikepenz:fastadapter-extensions-expandable", version.ref = "latestFastAdapterRelease" }
+fastadapter-extensions-paged = { module = "com.mikepenz:fastadapter-extensions-paged", version.ref = "latestFastAdapterRelease" }
+fastadapter-extensions-scroll = { module = "com.mikepenz:fastadapter-extensions-scroll", version.ref = "latestFastAdapterRelease" }
+fastadapter-extensions-swipe = { module = "com.mikepenz:fastadapter-extensions-swipe", version.ref = "latestFastAdapterRelease" }
+fastadapter-extensions-ui = { module = "com.mikepenz:fastadapter-extensions-ui", version.ref = "latestFastAdapterRelease" }
+fastadapter-extensions-utils = { module = "com.mikepenz:fastadapter-extensions-utils", version.ref = "latestFastAdapterRelease" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+objectbox-android = { module = "io.objectbox:objectbox-android", version.ref = "objectboxGradlePlugin" }
+objectbox-gradle-plugin = { module = "io.objectbox:objectbox-gradle-plugin", version.ref = "objectboxGradlePlugin" }
+x-x-x = { module = "io.objectbox:4.2.0" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+

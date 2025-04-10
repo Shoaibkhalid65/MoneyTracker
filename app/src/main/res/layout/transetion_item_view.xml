@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="transaction"
+            type="com.gshoaib998.moneytracker.data.models.Transaction" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_10"
+        app:shapeAppearanceOverlay="@style/cardviewStyle"
+        android:backgroundTint="@color/color_4"
+        app:layout_constraintEnd_toEndOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        formatedDate="@{transaction.dateTime}"
+        android:textSize="@dimen/text_size_15"
+        android:textColor="@color/blue"
+        android:layout_margin="@dimen/margin_5"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_note"
+        android:layout_width="@dimen/tv_width_250"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_date"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@{transaction.note}"
+        android:textSize="@dimen/text_size_17"
+        android:layout_margin="@dimen/margin_10" />
+    <TextView
+        android:id="@+id/tv_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_date"
+        app:layout_constraintStart_toEndOf="@id/tv_note"
+        formatedAmount="@{transaction.amount}"
+        android:layout_marginStart="@dimen/margin_10"
+        android:textSize="@dimen/text_size_20"
+        android:textStyle="italic"
+        setTextColor="@{transaction.amount}"
+        android:layout_marginTop="@dimen/margin_10"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

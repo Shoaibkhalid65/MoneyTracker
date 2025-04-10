@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <style name="textviewStyle" parent="TextAppearance.AppCompat">
+      <item name="android:textColor">@color/blue</item>
+      <item name="android:textSize">18dp</item>
+  </style>
+    <style name="cardviewStyle" parent="ShapeAppearance.Material3.Corner.Medium">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+</resources>
